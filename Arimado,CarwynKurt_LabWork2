@@ -1,0 +1,45 @@
+# Arimado, Carwyn Kurt S.
+# Assignment 2
+
+array1 = [7, 9, 7, 100, 11, 21, 68, 77, 1, 1]
+
+print(array1)
+
+print("\nMenu")
+print("1. Add an element")
+print("2. Insert an element")
+print("3. Modify an element")
+print("4. Delete an element")
+print("5. Arrange in ascending order")
+print("6. Arrange in descending order\n")
+
+choice = int(input("What do you want to do? (1-6) "))
+if choice == 1:
+    array1.append(int(input("Add an element to the array: ")))
+    print("The element has been added to the array!\n")
+    print("New Array: ", array1)
+elif choice == 2:
+    index = int(input("Insert the position to place the element in the array: "))
+    element = int(input("Insert an element to the array: "))
+    array1.insert(index, element)
+    print("The element has been inserted in the array!\n")
+    print("New Array: ", array1)
+elif choice == 3:
+    index = int(input("Insert the position to delete the element in the array: "))
+    array1.pop(index)
+    element = int(input("Insert an element to the array: "))
+    array1.insert(index, element)
+    print("The element in the array has been modified!\n")
+    print("New Array: ", array1)
+elif choice == 4:
+    array1.pop(int(input("Insert the position to delete the element in the array: ")))
+    print("The element in the array has been deleted!\n")
+    print("New Array: ", array1)
+elif choice == 5:
+    array1.sort(reverse = False)
+    print("Array in ascending order!\n")
+    print("New Array: ", array1)
+elif choice == 6:
+    array1.sort(reverse = True)
+    print("Array in  descending order!\n")
+    print("New Array: ", array1)
